@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-const Page = () => {
+const Page:React.FC = () => {
     const [nuevoValor, setNuevoValor] = useState("")
     const dispatch = useDispatch()
     const modificar = () => {
