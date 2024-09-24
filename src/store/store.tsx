@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { SliceValues } from "./slices/valuesSlice";
+import valuesSlice from "./slices/valuesSlice";
 import peopleSlice from "./slices/peopleSlice";
 import peopleThunkSlice from "./slices/peopleThunkSlice";
 import createSagaMiddleware from 'redux-saga';
@@ -10,7 +10,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
     reducer: {
-        valores: SliceValues.reducer,
+        valores: valuesSlice,
         persona: peopleSlice,
         peopleThunk: peopleThunkSlice,
         peopleSagas: peopleSagaSlice

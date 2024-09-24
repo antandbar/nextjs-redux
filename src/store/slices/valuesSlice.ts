@@ -11,7 +11,7 @@ const initialState: ValoresState = {
   contador: 0,
 };
 
-export const SliceValues = createSlice({
+const valuesSlice = createSlice({
   name: 'valores',
   initialState,
   reducers: {
@@ -27,4 +27,7 @@ export const SliceValues = createSlice({
   },
 });
 
-export const { guardarnombre, incrementarContador, resetearContador } = SliceValues.actions;
+export const { guardarnombre, incrementarContador, resetearContador } = valuesSlice.actions;
+
+// Exportar el reducer
+export default valuesSlice.reducer;
