@@ -2,12 +2,13 @@
 'use client'
 
 
+import { RootState } from "@/store/store";
 import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 
 const Page: React.FC = () => {
-    const miNombre = useSelector((state: any) => state.valores.nombre);
+    const miNombre = useSelector((state: RootState) => state.valores.nombre);
     return (
         <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Leer:</h1>
